@@ -58,7 +58,7 @@ class _ObjectDetectionAppState extends State<ObjectDetectionApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Object Detection App'),
+        title: const Text('Object Detection App'),
       ),
       body: FutureBuilder(
         future: loadModel(),
@@ -66,7 +66,7 @@ class _ObjectDetectionAppState extends State<ObjectDetectionApp> {
           if (snapshot.connectionState == ConnectionState.done) {
             return CameraWidget(onImageCaptured: _detectObjects);
           } else {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
         },
       ),
@@ -93,7 +93,7 @@ class _CameraWidgetState extends State<CameraWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints.expand(),
+      constraints: const BoxConstraints.expand(),
       child: CameraPreview(
         onImageCaptured: widget.onImageCaptured,
       ),

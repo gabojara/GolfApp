@@ -1,4 +1,5 @@
 import 'package:sqflite/sqflite.dart';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
 
 class DatabaseHelper {
@@ -11,6 +12,7 @@ class DatabaseHelper {
   DatabaseHelper._internal();
 
   Future<Database> get database async {
+    // ignore: unnecessary_null_comparison
     if (_database != null) return _database;
 
     _database = await initDatabase();
