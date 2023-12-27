@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, depend_on_referenced_packages, avoid_print
 
 import 'dart:io';
 import 'dart:convert';
@@ -104,8 +104,8 @@ class _MyHomePageState extends State<MyHomePage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('An error occurred!'),
-          content: const Text('The selected image does not contain a golf club.'),
+          title: const Text('エラーが発生しました！'),
+          content: const Text('選択した画像にはゴルフクラブが含まれていません。'),
           actions: <Widget>[
             TextButton(
               onPressed: () {
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('ホーム'),
         centerTitle: true,
         backgroundColor: Colors.black,
       ),
@@ -230,19 +230,19 @@ class __ZoomableImageState extends State<_ZoomableImage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      'Thickness length: ${grosor.toStringAsFixed(2)} cm',
+                      '厚さ: ${grosor.toStringAsFixed(2)} cm',
                       style: const TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     Text(
-                      'Width length: ${ancho.toStringAsFixed(2)} cm',
+                      '幅: ${ancho.toStringAsFixed(2)} cm',
                       style: const TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     Text(
-                      'Long length: ${largo.toStringAsFixed(2)} cm',
+                      '長さ: ${largo.toStringAsFixed(2)} cm',
                       style: const TextStyle(color: Colors.black, fontSize: 20),
                     ),
                     Text(
-                      'Material type: ${widget.type}',
+                      '素材の種類: ${widget.type}',
                       style: const TextStyle(color: Colors.black, fontSize: 20),
                     ),
                   ],
